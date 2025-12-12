@@ -348,7 +348,7 @@ const char* JeandleCompilation::check_can_parse(ciMethod* method) {
   if ( method->is_native())                     return "native method";
   if ( method->is_abstract())                   return "abstract method";
   if (!method->has_balanced_monitors())         return "not compilable (unbalanced monitors)";
-  if ( method->get_flow_analysis()->failing())  return "not compilable (flow analysis failed)";
+  // if ( method->get_flow_analysis()->failing())  return "not compilable (flow analysis failed)";
   if (!method->can_be_parsed())                 return "cannot be parsed";
   return nullptr;
 }
